@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de habitación - TAMPU</title>
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- menu -->
+    <header>
+        <div class="contenedor">
+            <a href="index.html" class="logo">
+                <img src="img/logo-160.png" alt="Logo de Tampu">
+                TAMPU
+            </a>
+            <button id="btnMenu">☰</button>
+            <nav id="menu">
+            <a href="index.html">Inicio</a>
+            <a href="habitaciones.html" class="activo">Habitaciones</a>
+            <a href="trabajos.html">Trabajos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="login.html">Iniciar sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <p class="titulo-pagina"><a href="habitaciones.html">Habitaciones</a> / Wanchaq</p>
+
+        <div class="detalle">
+            <div class="principal">
+                <img src="https://images.unsplash.com/photo-1720420021124-4e18564e070f?w=900&q=70" alt="Habitación amoblada cerca de la U. Continental">
+                <h1>Habitación amoblada cerca de la U. Continental</h1>
+                <p><i class="bi bi-geo-alt"></i> Wanchaq, Cusco - 8 min de la U. Continental</p>
+
+                <h2>Descripción</h2>
+                <p>Habitación amplia y luminosa en segundo piso, con escritorio, cama de 1.5 plazas y ropero. Ambiente tranquilo para estudiar. Ingreso independiente.</p>
+
+                <h2>Servicios</h2>
+                <p>
+                    <span class="etiqueta">Agua y luz</span>
+                    <span class="etiqueta">Wifi</span>
+                    <span class="etiqueta">Amoblado</span>
+                </p>
+
+                <h2>Reseñas <span class="estrellas">★★★★★</span></h2>
+                <div class="resena">
+                    <b>Estudiante de Sicuani</b> <span class="estrellas">★★★★☆</span>
+                    <p>Buena ubicación, el wifi a veces falla en las noches.</p>
+                </div>
+                <div class="resena">
+                    <b>Estudiante de Espinar</b> <span class="estrellas">★★★★★</span>
+                    <p>Muy tranquila para estudiar y la señora Rosa es muy amable.</p>
+                </div>
+            </div>
+
+            <aside>
+                <p class="precio">S/ 380 <small>al mes</small></p>
+                <p><b>Rosa Huamán</b> <span class="etiqueta verificado">✔ Verificado</span></p>
+                <p>Alquilo habitaciones a estudiantes desde hace 8 años.</p>
+
+                <form>
+                    <label for="fecha">Fecha de visita</label>
+                    <input type="date" id="fecha">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" rows="3" placeholder="Hola, me interesa la habitación..."></textarea>
+                    <br><br>
+                    <button type="button" class="btn">Solicitar visita</button>
+                </form>
+
+                <p class="aviso">Nunca pagues adelantos sin haber visitado la habitación.</p>
+            </aside>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <p>
+            <a href="index.html">Inicio</a>
+            <a href="habitaciones.html">Habitaciones</a>
+            <a href="trabajos.html">Trabajos</a>
+            <a href="nosotros.html">Nosotros</a>
+        </p>
+        <p>© 2026 TAMPU - Proyecto del curso Programación Web - Universidad Continental</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

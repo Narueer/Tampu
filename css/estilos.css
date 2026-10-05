@@ -1,0 +1,432 @@
+/* colores de TAMPU (paleta inspirada en Cusco) */
+:root {
+    --terracota: #b4532a; /* botones, enlaces y precios */
+    --terracota-oscuro: #8f3d1c; /* hover de botones */
+    --verde-andino: #1f3d36; /* títulos y footer */
+    --fondo: #faf6f2;
+    --crema: #f3e6d9; /* etiquetas */
+    --crema-aviso: #fdf1e8; /* aviso antiestafa */
+    --borde: #e5dad0;
+    --borde-input: #d6c8bb;
+    --texto: #333;
+    --texto-suave: #666;
+    --texto-footer: #ddd;
+    --verificado-fondo: #dcefe6; /* sello verificado */
+    --verificado-texto: #1f5244;
+    --error-fondo: #fde3e0;
+    --error: #c0392b; /* mensajes de error */
+    --estrella: #e0a100; /* calificaciones */
+    --radio: 6px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--terracota);
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: var(--verde-andino);
+}
+
+/* botones */
+.btn {
+    display: inline-block;
+    background-color: var(--terracota);
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid var(--terracota);
+    border-radius: var(--radio);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.btn:hover {
+    background-color: var(--terracota-oscuro);
+}
+
+.btn-borde {
+    background-color: white;
+    color: var(--terracota);
+}
+
+.btn-borde:hover {
+    background-color: var(--terracota);
+    color: white;
+}
+
+/* menú */
+header {
+    background-color: white;
+    border-bottom: 1px solid var(--borde);
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--verde-andino);
+}
+
+.logo img {
+    width: 50px;
+}
+
+nav a {
+    color: var(--texto);
+    margin: 0 12px;
+}
+
+nav a:hover,
+nav a.activo {
+    color: var(--terracota);
+    font-weight: bold;
+}
+
+#btnMenu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* portada */
+.portada {
+    background-color: var(--crema);
+    padding: 60px 0;
+}
+
+.portada .contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.portada h1 {
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.portada h1 span {
+    color: var(--terracota);
+}
+
+.portada p {
+    margin: 15px 0 25px;
+    font-size: 17px;
+}
+
+.portada img {
+    width: 300px;
+}
+
+/* secciones */
+.seccion {
+    padding: 50px 0;
+}
+
+.seccion h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.titulo-pagina {
+    margin: 30px 0 20px;
+}
+
+/* tarjetas */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarjeta {
+    background-color: white;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tarjeta .info {
+    padding: 15px;
+}
+
+.tarjeta h3 {
+    font-size: 17px;
+    margin: 5px 0;
+}
+
+.tarjeta p {
+    font-size: 14px;
+    color: var(--texto-suave);
+}
+
+.precio {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--terracota);
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: var(--crema);
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 20px;
+}
+
+.verificado {
+    background-color: var(--verificado-fondo);
+    color: var(--verificado-texto);
+    font-weight: bold;
+}
+
+.no-verificado {
+    background-color: var(--error-fondo);
+    color: var(--error);
+}
+
+.estrellas {
+    color: var(--estrella);
+}
+
+/* pasos */
+.paso {
+    background-color: white;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+}
+
+.paso i {
+    font-size: 35px;
+    color: var(--terracota);
+}
+
+/* filtros y lista */
+.con-filtros {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.filtros {
+    width: 250px;
+    background-color: white;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.resultados {
+    flex: 1;
+}
+
+#total {
+    margin-bottom: 10px;
+}
+
+.resultados .tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* formularios */
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid var(--borde-input);
+    border-radius: var(--radio);
+    font-family: inherit;
+}
+
+.checkbox {
+    font-weight: normal;
+}
+
+.checkbox input {
+    width: auto;
+}
+
+.formulario {
+    max-width: 450px;
+    margin: 40px auto;
+    background-color: white;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.formulario .btn {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.error {
+    color: var(--error);
+    font-size: 13px;
+}
+
+/* trabajos */
+.trabajo {
+    background-color: white;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* detalle */
+.detalle {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.detalle .principal {
+    flex: 2;
+}
+
+.detalle .principal img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.detalle aside {
+    flex: 1;
+    background-color: white;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 20px;
+    height: fit-content;
+}
+
+.resena {
+    border-bottom: 1px solid var(--borde);
+    padding: 10px 0;
+}
+
+.aviso {
+    background-color: var(--crema-aviso);
+    border-left: 4px solid var(--terracota);
+    padding: 10px;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+/* footer */
+footer {
+    background-color: var(--verde-andino);
+    color: var(--texto-footer);
+    padding: 30px 0;
+    margin-top: 40px;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    #btnMenu {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--borde);
+    }
+
+    nav.abierto {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px 20px;
+    }
+
+    .portada .contenedor,
+    .con-filtros,
+    .detalle,
+    .trabajo {
+        flex-direction: column;
+    }
+
+    .portada img {
+        display: none;
+    }
+
+    .tarjetas,
+    .resultados .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros {
+        width: 100%;
+    }
+}
